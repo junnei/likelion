@@ -74,17 +74,29 @@ WSGI_APPLICATION = 'mong.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-
-DATABASES = {
-    'default': {
+if 'aa1plhje31sr1ce.cp3bt5hdxzf0.ap-northeast-2.rds.amazonaws.com' in os.environ:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': os.environ['aa1plhje31sr1ce'],
+            'USER': os.environ['mongs'],
+            'PASSWORD': os.environ['156156'],
+            'HOST': os.environ['aa1plhje31sr1ce.cp3bt5hdxzf0.ap-northeast-2.rds.amazonaws.com'],
+            'PORT': os.environ['5432'],
+        }
+    }
+else:
+    DATABASES = {
+        'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'mong',
         'USER': 'postgres',
         'PASSWORD': '156156',
-        'HOST': 'django-env.tcacpk9ete.ap-northeast-2.elasticbeanstalk.com',
+        'HOST': '127.0.0.1',
         'PORT': '5432',
+        }
     }
-}
+
 
 
 # Password validation
