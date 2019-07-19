@@ -77,8 +77,12 @@ WSGI_APPLICATION = 'mong.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'c:\code\mysite\db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'mong',
+        'USER': 'postgres',
+        'PASSWORD': '156156',
+        'HOST': '127.0.0.1',
+        'PORT': '5432',
     }
 }
 
