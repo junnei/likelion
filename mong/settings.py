@@ -81,7 +81,7 @@ DATABASES = {
         'NAME': 'mong',
         'USER': 'postgres',
         'PASSWORD': '156156',
-        'HOST': '127.0.0.1',
+        'HOST': 'django-env.tcacpk9ete.ap-northeast-2.elasticbeanstalk.com',
         'PORT': '5432',
     }
 }
