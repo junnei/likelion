@@ -74,14 +74,14 @@ WSGI_APPLICATION = 'mong.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/2.1/ref/settings/#databases
-if 'aa1plhje31sr1ce.cp3bt5hdxzf0.ap-northeast-2.rds.amazonaws.com' in os.environ:
+if 'aa1wdknb0pepk4a.cp3bt5hdxzf0.ap-northeast-2.rds.amazonaws.com' in os.environ:
     DATABASES = {
         'default': {
             'ENGINE': 'django.db.backends.postgresql',
-            'NAME': os.environ['aa1plhje31sr1ce'],
+            'NAME': os.environ['aa1wdknb0pepk4a'],
             'USER': os.environ['mongs'],
             'PASSWORD': os.environ['156156'],
-            'HOST': os.environ['aa1plhje31sr1ce.cp3bt5hdxzf0.ap-northeast-2.rds.amazonaws.com'],
+            'HOST': os.environ['aa1wdknb0pepk4a.cp3bt5hdxzf0.ap-northeast-2.rds.amazonaws.com'],
             'PORT': os.environ['5432'],
         }
     }
